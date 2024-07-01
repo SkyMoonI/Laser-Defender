@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
 	{
 		moveInput = rawInput * Time.deltaTime * moveSpeed;
 		Vector2 newPosition = new Vector2();
-		// Clamp the player's position to the screen
+		// Clamp the player's position to the screen bounds with padding
 		newPosition.x = Mathf.Clamp(transform.position.x + moveInput.x, minBounds.x + paddingLeft, maxBounds.x - paddingRight);
 		newPosition.y = Mathf.Clamp(transform.position.y + moveInput.y, minBounds.y + paddingBottom, maxBounds.y - paddingTop);
 		transform.position = newPosition;
