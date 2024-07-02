@@ -12,7 +12,7 @@ public class WaveConfigSO : ScriptableObject
 	{
 		return moveSpeed;
 	}
-	public Transform GetStartingWayPoint()
+	public Transform GetStartingWayPoints()
 	{
 		return pathPrefab.GetChild(0);
 	}
